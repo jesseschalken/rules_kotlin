@@ -51,6 +51,7 @@ java_binary(
         "//src/main/kotlin:jdeps-gen",
         "//src/main/kotlin/io/bazel/kotlin/compiler",
         "@com_github_jetbrains_kotlin//:lib/kotlin-compiler.jar",
+        "@com_github_jetbrains_kotlin//:lib/jvm-abi-gen.jar",
     ],
     jvm_flags = [
         "-XX:+IgnoreUnrecognizedVMOptions",
