@@ -41,3 +41,16 @@ kt_jvm_test(
         "@maven//:junit_junit",
     ],
 )
+
+kt_jvm_test(
+    name = "kotest_test",
+    srcs = ["KotestTest.kt"],
+    test_class = "kotesttest.HelloWorldTest",
+    deps = [
+        "@com_github_jetbrains_kotlin//:kotlin-reflect",
+        "@maven//:io_kotest_kotest_assertions_core",
+        "@maven//:io_kotest_kotest_property",
+        "@maven//:io_kotest_kotest_runner_junit4",
+        "@maven//:junit_junit",
+    ],
+)

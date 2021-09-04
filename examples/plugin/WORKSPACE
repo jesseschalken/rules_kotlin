@@ -51,6 +51,9 @@ maven_install(
     artifacts = [
         "junit:junit:4.13.2",
         "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.0.1",
+        "io.kotest:kotest-runner-junit4:4.5.0",
+        "io.kotest:kotest-assertions-core:4.5.0",
+        "io.kotest:kotest-property:4.5.0",
     ],
     repositories = [
         "https://repo1.maven.org/maven2",
