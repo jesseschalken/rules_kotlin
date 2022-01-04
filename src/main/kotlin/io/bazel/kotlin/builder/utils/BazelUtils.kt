@@ -26,8 +26,7 @@ object BazelRunFiles {
   /**
    * Populated on windows. The RUNFILES_MANIFEST_FILE is set on platforms other then windows but it can be empty,]
    */
-  private val manifestFile: String? =
-      System.getenv("RUNFILES_MANIFEST_FILE") { "RUNFILES_MANIFEST_FILE not set in environment" }
+  private val manifestFile: String? = System.getenv("RUNFILES_MANIFEST_FILE")
 
   private val javaRunFiles = Paths.get(System.getenv("JAVA_RUNFILES"))
 
