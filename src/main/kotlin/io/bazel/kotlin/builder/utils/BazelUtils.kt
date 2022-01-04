@@ -23,16 +23,11 @@ import java.util.Collections
 
 /** Utility class for getting runfiles on windows and *nix.  */
 object BazelRunFiles {
-  private val isWindows = System.getProperty("os.name").lowercase().indexOf("win") >= 0
-
   /**
    * Populated on windows. The RUNFILES_MANIFEST_FILE is set on platforms other then windows but it can be empty,]
    */
   private val manifestFile: String? =
-      if (isWindows) {
-        checkNotNull(System.getenv(
-            "RUNFILES_MANIFEST_FILE")) { "RUNFILES_MANIFEST_FILE not set in environment" }
-      } else null
+      System.getenv("RUNFILES_MANIFEST_FILE")) { "RUNFILES_MANIFEST_FILE not set in environment" }
 
   private val javaRunFiles = Paths.get(System.getenv("JAVA_RUNFILES"))
 
